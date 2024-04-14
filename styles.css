@@ -242,6 +242,7 @@ iframe{
     margin-left: 0;
     font-family: 'Poppins',sans-serif;
     font-size: 20px;
+    cursor: pointer;
 }
 .fa-star{
     color: gold;
