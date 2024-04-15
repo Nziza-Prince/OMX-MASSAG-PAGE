@@ -34,6 +34,12 @@
         justify-content: end;
         background-color: rgb(130, 30, 0);
         padding: 25px;
+        position: static;
+       
+    }
+    #nav-button:hover{
+        background-color: white;
+       color:  rgb(130, 30, 0);
     }
     .navbar a{
         font-size: 12px;
@@ -44,7 +50,6 @@
     }
     .navbar a:hover {
       transform: translateY(-5px);
-      opacity: 0.7;
     }
     #nav-button{
         background: transparent;
@@ -57,10 +62,6 @@
         top: -13px;
         cursor: pointer;
         transition: background-color,0.5s;
-    }
-    #nav-button:hover{
-        background-color: white;
-       color:  rgb(130, 30, 0);
     }
     .image .image-text{
         position: absolute;
@@ -147,9 +148,23 @@ ul{
     display: block;
     transition: all 0.3s ease;
 }
+.footer-col ul li p{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color:  #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
 .footer-col ul li a:hover{
     color: #ffffff;
     padding-left:10px;
+}
+.footer-col ul li a:hover{
+    color: #ffffff;
+    padding-left:10px;   
 }
 .footer-col .social-images a{
     display: inline-block;
@@ -182,16 +197,6 @@ ul{
     margin-top: 100px;
     flex-direction: column;
 }
-.h1::before{
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    background-color: #e91e63;
-    height: 2px;
-    box-sizing: border-box;
-    width: 50px;
-}
 .h1 p{
     text-align: justify;
     width: 80%;
@@ -202,8 +207,9 @@ ul{
     border-radius: 3px;
     font-family: 'Montserrat',sans-serif;
     background-color: rgb(130, 30, 0);
-    padding: 2px;
+    padding: 5px;
     text-align: justify;
+    box-shadow: 0px 0px 10px rgb(130, 30, 0) ;
 }
 .map{
     display: flex;
@@ -262,7 +268,6 @@ iframe{
 .aboutus .description{
     border: 2px dotted rgb(130, 30, 0);
     padding-left: 10px;
-
 }
 .aboutus .description .h1{
     font-size: 35px;
@@ -271,57 +276,29 @@ iframe{
 }
 .aboutus .description #first-desc{
 margin-bottom: 50px;
+font-family: 'Montserrat',sans-serif;
+font-size: x-large;
 }
 .aboutus .description .second-desc{
-  margin-left: 145px;
+  margin-left: 15px;
   font-weight: bolder;
+  font-family: 'Montserrat',sans-serif;
 }
-@media(max-width:767px){
-    .footer-col{
-        width: 50%;
-        margin-bottom: 30px;
-    }
-    .aboutus img{
-        width: 40px;
-        margin-right: 0;
-    }
-    .aboutus .description .h1{
-        font-size: 15px;
-    }
-    .massage-types{
-       display: grid;
-       grid-template-columns: auto auto;
-       grid-template-rows: auto auto;
-    }
+.aboutus .description button{
+        background-color: rgb(130, 30, 0);
+        border: 2px solid white;
+        color: white;
+        padding: 10px;
+        border-radius: 30px;
+        width: 120px;
+        margin-top: 30px;
+        cursor: pointer;
+        transition: background-color,0.5s;
+        text-align: center;   
+}
+.aboutus .description button:hover{
+    color: rgb(130, 30, 0);
+    border: 2px solid rgb(130, 30, 0);
+    background: transparent;
+}
 
-}
-@media(max-width:574px){
-    .footer-col{
-        width: 100%;
-      
-    }
-    .card-image img{
-        width: 150px;
-        height: 100px;
-        object-fit: cover;
-      }
-      .card-image p{
-        width: 135px;
-        text-align: justify;
-        color: #ffffff;
-        margin-left: 15px;
-        margin-bottom: 20px;
-        margin-right: 15px;
-       
-    }
-    .card-image h4{
-        display: flex;
-        align-items: center;
-        color: #ffffff;
-        margin-top: 40px;
-        margin-bottom: 30px;
-        margin-left: 15px;
-        font-family: 'Headland One',Static;
-    }
-   
-}
