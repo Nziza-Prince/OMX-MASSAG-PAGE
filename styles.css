@@ -8,6 +8,12 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+.logo{
+    color: white;
+    position: relative;
+     display: flex;
+     justify-content: start;
+}
   h1{
     font-family: 'Headland One',Static;
   }
@@ -27,16 +33,23 @@
  #about{
     text-align: center;
  }
+
+ li{
+    list-style-type: none;
+ }
  .navbar{
-        display: flex;
-        gap: 5;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        justify-content: end;
-        background-color: rgb(130, 30, 0);
-        padding: 25px;
-        position: static;
-       
-    }
+     width: 100%;
+     height: 60px;
+    margin: 0;
+     background-color: rgb(130, 30, 0);
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+       }
+       .navbar .logo a{
+        font-size: 1.5rem;
+        font-weight: bold;
+       }
     #nav-button:hover{
         background-color: white;
        color:  rgb(130, 30, 0);
@@ -48,6 +61,11 @@
         cursor: pointer;
         transition: all 0.5s ease;
     }
+ .navbar .links{
+        display: flex;
+        margin-top: 1px;
+    }
+
     .navbar a:hover {
       transform: translateY(-5px);
     }
@@ -59,10 +77,49 @@
         border-radius: 30px;
         width: 120px;
         position: relative;
-        top: -13px;
+        top: -7px;
         cursor: pointer;
         transition: background-color,0.5s;
     }
+    .navbar .toggle{
+        margin-right: 35px;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+        display: none;
+    }
+    .dropdown_menu{
+        margin-top: 2px;
+        display: none;
+       position: absolute;
+       right: 2rem;
+       top: 60px;
+       width: 300px;
+       background-color: rgb(130, 30, 0);
+       backdrop-filter: blur(15px);
+       border-radius: 10px;
+       overflow: hidden;
+       transition: all,0.5s ease;
+    }
+    .dropdown_menu li{
+        padding: 0.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       transition: all,0.5s ease;
+
+    }
+    .dropdown_menu a{
+        transition: all,0.5s ease;
+        color: white;
+    }
+    .dropdown_menu a:hover{
+        transform: translateY(-5px);
+    }
+    .dropdown_menu.open{
+        display: block;
+       transition: all,0.5s ease;
+}
     .image .image-text{
         position: absolute;
         top: 40%;
@@ -73,9 +130,12 @@
         justify-content: center;
         flex-direction: column;
         gap: 25px;
+    }
+    .fa-x{
+        font-size: 1rem;
         
-}
-
+    }
+  
 .text-after-image{
   display: flex;
   text-align: justify;
@@ -187,8 +247,9 @@ ul{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 50px;
+    gap: 10px;
     margin-top:50px;
+    flex-wrap: wrap;
 }
 .h1{
     display: flex;
@@ -209,7 +270,7 @@ ul{
     background-color: rgb(130, 30, 0);
     padding: 5px;
     text-align: justify;
-    box-shadow: 0px 0px 10px rgb(130, 30, 0) ;
+    box-shadow: 0px 2px 4px rgb(130, 30, 0) ;
 }
 .map{
     display: flex;
@@ -217,6 +278,8 @@ ul{
     justify-content: center;
     width: 100%;
     margin-bottom: 80px;
+    margin-top:50px ;
+
 }
 iframe{
     width: 100%;
@@ -255,19 +318,23 @@ iframe{
     padding-right: 10px;
 }
 .aboutus{
+    width: 100%;
     display: flex;
   margin-top: 50px;
- 
+  align-items: center;
+  flex-wrap: wrap;
 }
 .aboutus img{
-    width: 600px;
+    width: 550px;
     height: 500px;
     object-fit: cover;
-    margin-right: 20px;
+   margin-right: 10px;
+
 }
 .aboutus .description{
     border: 2px dotted rgb(130, 30, 0);
     padding-left: 10px;
+    width: 63%;
 }
 .aboutus .description .h1{
     font-size: 35px;
@@ -301,4 +368,160 @@ font-size: x-large;
     border: 2px solid rgb(130, 30, 0);
     background: transparent;
 }
+
+@media (max-width:750px){
+    .aboutus img{
+        width: 500px;
+        height: 500px;
+        object-fit: cover;
+       margin-right: 10px;
+      text-align: center;
+    }
+   
+    .aboutus .description{
+        border: 2px dotted rgb(130, 30, 0);
+        padding-left: 10px;
+        width: 100%;
+    }
+    .aboutus .description .h1{
+        font-size: 17px;
+        font-family: 'Poppins',serif;
+        color: rgb(130, 30, 0);
+    }
+    .aboutus .description .second-desc{
+        margin-left: 0px;
+        font-weight: bolder;
+        font-family: 'Montserrat',sans-serif;
+      }
+      .card-image img{
+        width: 400px;
+        height: 250px;
+        object-fit: cover;
+      }
+      .card-image h4{
+          display: flex;
+          align-items: center;
+          color: #ffffff;
+          margin-top: 40px;
+          margin-bottom: 30px;
+          margin-left: 15px;
+          font-family: 'Headland One',Static;
+      }
+      .card-image p{
+          width: 370px;
+          text-align: justify;
+          color: #ffffff;
+          margin-left: 15px;
+          margin-bottom: 20px;
+         
+      }
+      .dropdown_menu{
+        left: 2rem;
+        width: unset;
+      }
+}
+@media (max-width:992px){
+    .navbar .links{
+        display: none;
+    }
+    .navbar .toggle{
+        display: block;
+    }
+ .image .image-text{
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        color: rgb(253, 244, 244);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 25px;
+    }
+    .aboutus .description{
+        border: 2px dotted rgb(130, 30, 0);
+        padding-left: 10px;
+        width: 50%;
+    }
+    .aboutus .description .h1{
+        font-size: 17px;
+        font-family: 'Poppins',serif;
+        color: rgb(130, 30, 0);
+    }
+    .aboutus .description .second-desc{
+        margin-left: 0px;
+        font-weight: bolder;
+        font-family: 'Montserrat',sans-serif;
+      }
+      .aboutus img{
+        width: 420px;
+        height: 500px;
+        object-fit: cover;
+       margin-right: 10px;
+     
+    }
+}
+@media (max-width:579px){
+    .aboutus img{
+        width: 117%;
+        height: 500px;
+        object-fit: cover;
+    
+    }
+    .aboutus .description{
+        border: 2px dotted rgb(130, 30, 0);
+        padding-left: 10px;
+        width: 100%;
+    }
+    .card-image img{
+        width: 300px;
+        height: 250px;
+        object-fit: cover;
+      }
+      .card-image h4{
+          display: flex;
+          align-items: center;
+          color: #ffffff;
+          margin-top: 40px;
+          margin-bottom: 30px;
+          margin-left: 15px;
+          font-family: 'Headland One',Static;
+      }
+      .card-image p{
+          width: 250px;
+          text-align: justify;
+          color: #ffffff;
+          margin-left: 15px;
+          margin-bottom: 20px;
+        }
+   
+        .text-after-image{
+            display: flex;
+            text-align: justify;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 85%;
+            margin-left: 5%;
+            margin-top: 5%;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            gap: 20px;
+          }
+          .image img{
+            width: 99.9%;
+          }
+}
+@media (max-width :767px){
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+@media(max-width:574px){
+    .footer-col{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
 

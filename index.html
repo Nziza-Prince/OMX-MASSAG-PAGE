@@ -9,15 +9,35 @@
 
 </head>
 <body>
-    <div class="navbar">
-       <a href="./index.html">HOME</a>
-            <a href="#about">ABOUT US</a>
-            <a href="#services">SERVICES+PRICING</a>
-            <a href="#location">LOCATION</a>
-            <a href="https://omxhotels.com/contact-us" target="_blank">CONTACT</a>
-            <a href="https://hotels.cloudbeds.com/reservation/tqLTef#checkin=2024-04-15&checkout=2024-04-16" target="_blank"><button id="nav-button">BOOK ONLINE</button></a>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="">OMX HOTELS</a>
+            </div>
+            <ul>
+                   <div class="links">
+                    <li><a href="./index.html">HOME</a></li>
+                        <li><a href="#about">ABOUT US</a></li>
+                        <li><a href="#services">SERVICES+PRICING</a></li>
+                        <li><a href="#location">LOCATION</a></li>
+                        <li><a href="https://omxhotels.com/contact-us" target="_blank">CONTACT</a></li>
+                       <li> <a href="https://hotels.cloudbeds.com/reservation/tqLTef#checkin=2024-04-15&checkout=2024-04-16" target="_blank"><button id="nav-button">BOOK ONLINE</button></a></li>
+                    </ul>
+                    <div class="toggle">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+           </div>
+            </div>
         </div>
-    </div>
+        <div class="dropdown_menu">
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="#about">ABOUT US</a></li>
+            <li><a href="#services">SERVICES+PRICING</a></li>
+            <li><a href="#location">LOCATION</a></li>
+            <li><a href="https://omxhotels.com/contact-us" target="_blank">CONTACT</a></li>
+           <li> <a href="https://hotels.cloudbeds.com/reservation/tqLTef#checkin=2024-04-15&checkout=2024-04-16" target="_blank"><button id="nav-button">BOOK ONLINE</button></a></li>
+        </div>
+    </header>
     <div class="image">
         <img src="./images/download.jpeg" alt="">
         <div class="image-text">
@@ -34,7 +54,7 @@
    
     <div class="h1">
         <h1 style="color: rgb(130, 30, 0);" id="services">OUR SERVICES</h1>
-       <p>We provide the most exclusive massage of all time ranging from <strong>Aroma therapy, Hydrotherapy</strong> and other types of massage you may need as well omx hotel is here for any type of massage you may need</p>
+        <p>We provide the most exclusive massage of all time ranging from <strong>Aroma therapy, Hydrotherapy</strong> and other types of massage you may need as well omx hotel is here for any type of massage you may need</p>
     </div>
     <div class="massage-types">
    <div class="card-image">
@@ -42,9 +62,7 @@
     <h4>Foot Massage</h4>
     <p>A foot massage is a therapeutic practice that involves applying pressure to specific points on the feet to promote relaxation, improve circulation and relieve tension</p>
     <div class="pricing">
-        <p><i class="fa-solid fa-clock"></i>40 min</p>
-        <p class="price"><i class="fa-solid fa-star"></i>$230</p>
-    
+        <p class="price"><i class="fa-solid fa-clock"></i>40 min</p>
     </div>
    </div>
    <div class="card-image">
@@ -52,8 +70,8 @@
     <h4>Back Massage</h4>
     <p>A back massage is a therapeutic technique that involves the manipulation of the muscles, tendons, and ligaments in the back area to promote relaxation,relieve tension.</p>
     <div class="pricing">
-        <p><i class="fa-solid fa-clock"></i>40 min</p>
-        <p class="price"><i class="fa-solid fa-star"></i>$230</p>
+        <p class="price"><i class="fa-solid fa-clock"></i>40 min</p>
+     
     </div>
    </div>
    <div class="card-image">
@@ -61,17 +79,15 @@
     <h4>Head Massage</h4>
     <p>A head massage, also known as a scalp massage, is a therapeutic technique that involves manipulating the soft tissues of the scalp, including the skin and muscles.</p>
     <div class="pricing">
-        <p><i class="fa-solid fa-clock"></i>40 min</p>
-        <p class="price"><i class="fa-solid fa-star"></i>$230</p>
-    </div>
+        <p class="price"><i class="fa-solid fa-clock"></i>40 min</p>
+     </div>
    </div>
    <div class="card-image">
     <img src="./images/Enjoy a basalt hot stone massage at the Angeline Spa_.jpeg" alt="">
     <h4>Stone Massage</h4>
     <p>A stone massage is a therapeutic technique that involves the use of smooth, heated stones to apply pressure and heat to the body. Typically.</p>
     <div class="pricing">
-        <p><i class="fa-solid fa-clock"></i>40 min</p>
-        <p class="price"><i class="fa-solid fa-star"></i>$230</p>
+        <p class="price"><i class="fa-solid fa-clock"></i>40 min</p>
     </div>
    </div>
 </div>
@@ -80,8 +96,7 @@
         <h1 style="color: rgb(130, 30, 0);" id="about">About us</h1>
     </div>
     <div class="aboutus">
-       
-        <div class="images">
+       <div class="images">
             <img src="./images/Cómo hacer el masaje de pies más increíble paso a paso.jpeg" alt="">
        </div>
         <div class="description">
@@ -133,5 +148,24 @@
         </div>
      </div>
   </footer>
+  <script>
+    let toggle=document.querySelector('.toggle')
+    let toggleBtn=document.querySelector('.toggle  i')
+    let dropdown=document.querySelector(".dropdown_menu")
+    
+    toggle.onclick=()=>{
+        dropdown.classList.toggle("open")
+        let isOpen=dropdown.classList.contains('open') 
+        if(isOpen){
+            toggleBtn.classList.remove('fa-bars')
+            toggleBtn.classList.add('fa-x')
+        }
+        else{
+            toggleBtn.classList.remove('fa-x')
+            toggleBtn.classList.add('fa-bars') 
+        }
+    }
+   
+  </script>
 </body>
 </html>
