@@ -11,6 +11,9 @@
 html{
     scroll-behavior: smooth;
 }
+body{
+    overflow-x: hidden;
+}
 .logo{
     color: white;
     position: relative;
@@ -325,6 +328,7 @@ iframe{
     display: flex;
   margin-top: 50px;
   align-items: center;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 .aboutus img{
