@@ -371,6 +371,32 @@ font-size: x-large;
     border: 2px solid rgb(130, 30, 0);
     background: transparent;
 }
+.to-top{
+    background-color: rgb(130, 30, 0);
+    position: fixed;
+    bottom: 16px;
+    right: 32px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+   
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s ease;
+}
+.to-top i{
+    color: rgb(221, 219, 219);
+}
+.to-top.active{
+    bottom: 32px;
+    pointer-events: auto;
+    opacity: 1;
+}
 
 @media (max-width:750px){
     .aboutus img{
@@ -464,29 +490,7 @@ font-size: x-large;
      
     }
 }
-.to-top{
-    background-color: aqua;
-    position: fixed;
-    bottom: 16px;
-    right: 32px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 32px;
-    color: black;
-    text-decoration: none;
-    opacity: 0;
-    pointer-events: none;
-    transition: all .4s ease;
-}
-.to-top.active{
-    bottom: 32px;
-    pointer-events: auto;
-    opacity: 1;
-}
+
 @media (max-width:579px){
     .aboutus img{
         width: 100%;
