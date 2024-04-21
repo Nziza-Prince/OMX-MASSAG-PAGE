@@ -560,5 +560,13 @@ font-size: x-large;
         margin-top:20%;
     }
 }
+@media screen and (max-width: 400px) {
+    image .image-text{
+        font-size: 1rem;
+        margin-top:20%;
+        top: 60%;
+    }  
+}
+
 
 
