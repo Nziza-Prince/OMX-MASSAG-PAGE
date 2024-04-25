@@ -333,16 +333,16 @@ iframe{
   flex-wrap: wrap;
 }
 .aboutus img{
-    width: 100%;
+    width: 602px;
     height: 500px;
     object-fit: cover;
-   margin-right: 10px;
+   
 
 }
 .aboutus .description{
     border: 2px dotted rgb(130, 30, 0);
     padding-left: 10px;
-    width: 50%;
+    width: 60%;
 }
 .aboutus .description .h1{
     font-size: 35px;
@@ -405,7 +405,7 @@ font-size: x-large;
 
 @media (max-width:750px){
     .aboutus img{
-        width: 500px;
+        width: 500%;
         height: 500px;
         object-fit: cover;
        margin-right: 10px;
@@ -475,7 +475,7 @@ font-size: x-large;
     .aboutus .description{
         border: 2px dotted rgb(130, 30, 0);
         padding-left: 10px;
-        width: 50%;
+        width: 100%;
     }
     .aboutus .description .h1{
         font-size: 17px;
@@ -488,7 +488,7 @@ font-size: x-large;
         font-family: 'Montserrat',sans-serif;
       }
       .aboutus img{
-        width: 420px;
+        width: 750px;
         height: 500px;
         object-fit: cover;
        margin-right: 10px;
@@ -498,7 +498,7 @@ font-size: x-large;
 
 @media (max-width:579px){
     .aboutus img{
-        width: 100%;
+        width: 150%;
         height: 500px;
         object-fit: cover;
     
@@ -551,6 +551,7 @@ font-size: x-large;
         width: 50%;
         margin-bottom: 30px;
     }
+   
 }
 @media(max-width:574px){
     .footer-col{
@@ -562,11 +563,14 @@ font-size: x-large;
         margin-top:20%;
     }
 }
-@media screen and (max-width: 400px) {
+@media(max-width: 400px) {
     image .image-text{
         font-size: 1rem;
         margin-top:20%;
         top: 60%;
+    }
+    .aboutus img{
+        width: 20px
     }  
 }
 
